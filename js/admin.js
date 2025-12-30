@@ -74,13 +74,13 @@ function renderTable(books) {
         const displayImage = processImageURL(book.image_url);
 
         row.innerHTML = `
-            <td><img src="${displayImage}" class="thumb" alt="Cover" onerror="this.src='https://via.placeholder.com/40x60?text=?'"></td>
-            <td>${book.title || ''}</td>
-            <td>${book.author || ''}</td>
-            <td><span style="background: rgba(0,0,0,0.05); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">${book.category || 'N/A'}</span></td>
-            <td>${book.stock || 0}</td>
-            <td>₹${book.price || 0}</td>
-            <td>
+            <td data-label="Image"><img src="${displayImage}" class="thumb" alt="Cover" onerror="this.src='https://via.placeholder.com/40x60?text=?'"></td>
+            <td data-label="Title">${book.title || ''}</td>
+            <td data-label="Author">${book.author || ''}</td>
+            <td data-label="Category"><span style="background: rgba(0,0,0,0.05); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">${book.category || 'N/A'}</span></td>
+            <td data-label="Stock">${book.stock || 0}</td>
+            <td data-label="Price">₹${book.price || 0}</td>
+            <td data-label="Actions">
                 <button class="action-btn edit-btn" onclick="openEditModal('${book.id}')"><i class="fas fa-edit"></i> Edit</button>
                 <button class="action-btn delete-btn" onclick="deleteBook('${book.id}')"><i class="fas fa-trash"></i></button>
             </td>
