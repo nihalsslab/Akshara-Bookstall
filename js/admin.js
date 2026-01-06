@@ -192,8 +192,8 @@ async function handleFormSubmit(e) {
     // Check if new file selected
     if (fileInput.files.length > 0) {
         const file = fileInput.files[0];
-        if (file.size > 2 * 1024 * 1024) { // 2MB limit check (optional but good practice)
-            alert("File is too large. Please select an image under 2MB.");
+        if (file.size > 6 * 1024 * 1024) { // 2MB limit check (optional but good practice)
+            alert("File is too large. Please select an image under 6MB.");
             return;
         }
 
@@ -311,3 +311,4 @@ function processImageURL(url) {
     }
     return newUrl;
 }
+
