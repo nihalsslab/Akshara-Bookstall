@@ -4,7 +4,7 @@ const API_URL = "https://script.google.com/macros/s/AKfycbyInS5VHsrewilnPYokOEAS
 let inventory = [];
 
 // Default PIN (You can change this)
-const ADMIN_PIN = "9526452423";
+const ADMIN_PIN = "1234";
 
 document.addEventListener('DOMContentLoaded', () => {
     // Check if already logged in this session
